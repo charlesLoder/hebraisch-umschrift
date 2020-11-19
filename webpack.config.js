@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
+const version = require("./package.json").dependencies.umschrift;
 
 module.exports = {
   entry: "./src/index.js",
@@ -25,6 +26,7 @@ module.exports = {
       day: function () {
         return this.date.getDate();
       },
+      version: version,
     }),
     new ScriptExtHtmlWebpackPlugin({
       defaultAttribute: "defer",
