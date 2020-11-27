@@ -1,7 +1,10 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ScriptExtHtmlWebpackPlugin = require("script-ext-html-webpack-plugin");
-const version = require("./package.json").dependencies.umschrift;
+const version = require("./package.json").dependencies.umschrift.replace(
+  "^",
+  ""
+);
 
 module.exports = {
   entry: "./src/index.js",
