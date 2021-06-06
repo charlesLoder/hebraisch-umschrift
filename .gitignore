@@ -1,7 +1,6 @@
 /dist
 /node_moules
 /.vscode
-package-lock.json
 *.tgz
 node_modules
 .DS_Store
